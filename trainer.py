@@ -88,7 +88,7 @@ def main(filename, subset):
     def key_events(e):
         if e.char == ' ':
             generate_scr(l, state(vars_dict))
-        if e.char == 'a':
+        if e.char == 's':
             if len(state(vars_dict)) == len(groups):
                 deselect_all()
             else:
