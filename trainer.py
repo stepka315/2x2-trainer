@@ -1,16 +1,9 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Jun 24 17:24:00 2020
-
-@author: stepka
-"""
 import tkinter as tk
 import pickle, random
 
 
 run = True
-filename = "cll.pickle"
+filename = "scr/cll.pickle"
 subset = "CLL"
 
 def refresh(new_file, new_subset):
@@ -22,7 +15,8 @@ def refresh(new_file, new_subset):
 def close():
     global run, root
     root.destroy()
-    run=False
+    run = False
+
 while run:
     f = open(filename, 'rb')
     scrambles = pickle.load(f)
@@ -45,14 +39,14 @@ while run:
     root.config(menu=main_menu)
     set_menu = tk.Menu(main_menu, bg='white', activebackground='#93c7eb')
     main_menu.add_cascade(label="Subsets", menu=set_menu)
-    set_menu.add_command(label="CLL", command = lambda: refresh('cll.pickle', "CLL"))
-    set_menu.add_command(label="EG-1", command = lambda: refresh('eg1.pickle', "EG1"))
-    set_menu.add_command(label="EG-2", command = lambda: refresh('eg2.pickle', "EG2"))
+    set_menu.add_command(label="CLL", command = lambda: refresh('scr/cll.pickle', "CLL"))
+    set_menu.add_command(label="EG-1", command = lambda: refresh('scr/eg1.pickle', "EG1"))
+    set_menu.add_command(label="EG-2", command = lambda: refresh('scr/eg2.pickle', "EG2"))
     set_menu.add_separator()
-    set_menu.add_command(label="TCLL", command = lambda: refresh('tcll.pickle', "TCLL"))
-    set_menu.add_command(label="LS1", command = lambda: refresh('ls1.pickle', "LS1"))
-    set_menu.add_command(label="LS2", command = lambda: refresh('ls2.pickle', "LS2"))
-    set_menu.add_command(label="LS3", command = lambda: refresh('ls3.pickle', "LS3"))
+    set_menu.add_command(label="TCLL", command = lambda: refresh('scr/tcll.pickle', "TCLL"))
+    set_menu.add_command(label="LS1", command = lambda: refresh('scr/ls1.pickle', "LS1"))
+    set_menu.add_command(label="LS2", command = lambda: refresh('scr/ls2.pickle', "LS2"))
+    set_menu.add_command(label="LS3", command = lambda: refresh('scr/ls3.pickle', "LS3"))
 
 
     def select_all():
