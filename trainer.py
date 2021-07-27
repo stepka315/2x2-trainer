@@ -121,7 +121,7 @@ while run:
     l = tk.Label(root, bg='white')
     prev_scr = None
 
-    b = tk.Button(root, text='generate scranble', command= lambda : generate_scr(l, state(vars_dict)), bg='white', activebackground='#93c7eb')
+    b = tk.Button(root, text='generate scramble', command= lambda : generate_scr(l, state(vars_dict)), bg='white', activebackground='#93c7eb')
     b.grid(sticky='w')
     tk.Button(root, text='select all', command= select_all, bg='white', activebackground='#93c7eb').grid(sticky='w')
     tk.Button(root, text='deselect all', command= deselect_all, bg='white', activebackground='#93c7eb').grid(sticky='w')
